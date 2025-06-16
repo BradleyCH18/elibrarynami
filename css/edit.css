@@ -1,0 +1,107 @@
+:root {
+  --primary: #0070f3;
+  --primary-dark: #005ac1;
+  --bg-dark: #1b2430;
+  --input-bg: #2d3a4f;
+  --input-border: #4c5c7a;
+  --text-light: #ffffff;
+  --placeholder: #aab8d5;
+  --green: #00b894;
+  --green-dark: #019874;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: var(--text-light);
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+form {
+  background-color: var(--bg-dark);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--text-light);
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--placeholder);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="file"] {
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-light);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="file"]:focus {
+  border-color: var(--primary);
+  background-color: #34405e;
+}
+
+input[type="file"] {
+  background-color: transparent;
+  border: 1px dashed var(--input-border);
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.back-btn {
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--green);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: var(--green-dark);
+}
